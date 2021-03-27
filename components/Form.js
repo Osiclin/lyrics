@@ -2,11 +2,12 @@ import { useEffect, useRef, useState } from 'react'
 import styles from '../styles/Form.module.css'
 
 export default function Form() {
-    let app = useRef(null)
+    let app = useRef()
     const  [lyrics, setLyrics] = useState('')
     const  [button, setButton] = useState('Search')
     const [song, setSong] = useState('')
     const [artist, setArtist] = useState('')
+    
 
     const searchLyrics = (e) => {
         e.preventDefault()
@@ -39,10 +40,6 @@ export default function Form() {
     const close = () => {
         app.style.display = "none"
     }
-
-    useEffect(() => {
-        
-    })
 
 
     return (
