@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import styles from '../styles/Form.module.css'
 
 export default function Form() {
@@ -23,7 +23,7 @@ export default function Form() {
                 setSong(song)
                 setArtist(artist)
                 setLyrics(data.lyrics)
-                app.style.display = "block";
+                app.current.style.display = "block";
                 setButton('Search')
             } else {
                 setButton('Not found')
@@ -38,7 +38,7 @@ export default function Form() {
     }
 
     const close = () => {
-        app.style.display = "none"
+        app.current.style.display = "none"
     }
 
 
@@ -51,9 +51,9 @@ export default function Form() {
                     <button className={styles.button} onClick={searchLyrics}>{button}</button>
                 </div>
             </form>
-            <div className={styles.lyricsbody} ref={el => app = el}>
+            <div className={styles.lyricsbody} ref={app}>
                 <div className={styles.back} onClick={close}>Back</div>
-                <h3 className={styles.searchtitle}>{song} by {artist.toUpperCase()}</h3>
+                <h3 className={styles.searchtitle}>{song.toLowerCase()} by {artist.toUpperCase()}</h3>
                 <pre className={styles.lyricstext}>{lyrics}</pre>
             </div>
         </div>
