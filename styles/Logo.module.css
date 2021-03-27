@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logotext{
+    color: beige;
+    font-size: 1.6rem;
+    text-decoration: underline;
+    font-family: 'Grenze', serif;
+}
+
+#logosymbol{
+    margin-top: 5px;
+    border-radius: 50%;
+    width: 1.4rem;
+    height: 1.4rem;
+    font-size: 1rem;
+    color: black;
+    background-color: beige;
+    font-family: 'Grenze', serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
