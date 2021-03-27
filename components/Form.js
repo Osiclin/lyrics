@@ -3,7 +3,6 @@ import styles from '../styles/Form.module.css'
 
 export default function Form() {
     let app = useRef(null)
-    let back = useRef(null)
     const  [lyrics, setLyrics] = useState('')
     const  [button, setButton] = useState('Search')
     const [song, setSong] = useState('')
@@ -41,6 +40,10 @@ export default function Form() {
         app.style.display = "none"
     }
 
+    useEffect(() => {
+        
+    })
+
 
     return (
         <div className={styles.container}>
@@ -52,7 +55,7 @@ export default function Form() {
                 </div>
             </form>
             <div className={styles.lyricsbody} ref={el => app = el}>
-                <div className={styles.back} ref={el => back = el} onClick={close}>Back</div>
+                <div className={styles.back} onClick={close}>Back</div>
                 <h3 className={styles.searchtitle}>{song} by {artist.toUpperCase()}</h3>
                 <pre className={styles.lyricstext}>{lyrics}</pre>
             </div>
