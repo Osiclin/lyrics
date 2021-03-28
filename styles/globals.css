@@ -10,6 +10,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background: url(../public/images/background.jpeg);
     background-size: cover;
+    background-attachment: fixed;
     background-position: 80%;
     background-repeat: no-repeat;
 }
